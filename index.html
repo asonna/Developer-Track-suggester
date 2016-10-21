@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Programming Track Suggester</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1>DEVELOPER TRACK SUGGESTER</h1>
+      </div>
+
+      <div class="row">
+        <form>
+          <h3>Select yout preference using the below drop down menu to see your suggested track:</h3>
+          <br>
+          <br>
+          <label for="devOption">1- Do you like to:
+            A- make pages look great using layouts,colors and design? or B- design and develop codes that will execute users request or C- do both?</label>
+            <p>(Please make your selection below)</p>
+            <select class="form-control" id="whichOption">
+              <option>A</option>
+              <option>B</option>
+              <option>C</option>
+            </select>
+          <br>
+
+          <button type="submit" class="btn1">Submit</button>
+        </form>
+      </div>
+
+      <div class="row" id="frontEnd">
+        <div class="col-md-6">
+          <h3>Congratulation! You are definitely cut for the Front End Programming. Please consider registering for the design/  track at Epicodus.</h3>
+          <p>Here are additional resourcefull site you can check to get more insideful informations about front end programming:</p>
+          <ul>
+            <li><a>Treehouse</li>
+            <li>Epicodus</li>
+            <li>XXXX</li>
+          </ul>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-5">
+          <img src="img/frontEnd.png" alt="frontEnd"/>
+        </div>
+      </div>
+
+      <div class="row" id="backEnd">
+        <form>
+          <h3>If you are ready this message, you must be cut for back end programming. To help you narrow down to the language that will best serve your purpose, please answer the below additional questions:</h3>
+          <br>
+          <br>
+          <label for="questions">3- What type of companies are you targeting for employment:</label>
+            <select class="form-control" id="question">
+              <option value="csharp">Large Corporations</option>
+              <option value="java">>Any Company</option>
+              <option value="php">>Governement Agencies</option>
+              <option value="ruby">>StartUp/Small Companies</option>
+            </select>
+          <br>
+          <label for="questions">Question 2</label>
+            <select class="form-control" class="question">
+              <option value="csharp">Windows / Microsoft</option>
+              <option value="java">>Any platform</option>
+              <option value="php">>Linux/Unix</option>
+              <option value="ruby">>Mac</option>
+            </select>
+          <br>
+          <label for="questions">4- What platform do you prefer to operate on?</label>
+            <select class="form-control" class="question">
+              <option value="csharp">Business Software</option>
+              <option value="java">High Performance Applications</option>
+              <option value="php">Low Interaction Heavy Content Sites</option>
+              <option value="ruby">>Interactive Web Applications</option>
+            </select>
+          <br>
+          <label for="questions">What are you interested in working on?</label>
+            <select class="form-control" class="question">
+              <option value="1"
+            </select>
+          <br>
+          <label for="questions">Question 5</label>
+
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
