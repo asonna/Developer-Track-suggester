@@ -11,54 +11,56 @@ var whichDev = function(whichOption) {
   }
 }
 
-// var whichLanguage = function(userInput1, userInput2, userInput3) {
-//   var cSh = 0;
-//   var jav = 0;
-//   var php = 0;
-//   var rub = 0;
-//
-//   if (userInput1="cSharp") {
-//     cSch += 1;
-//   } else if (userInput1="java") {
-//     jav = +=1;
-//   } else if (userInput1="php") {
-//     php = +=1;
-//   } else {
-//     rub = +1;
-//   }
-//
-//   if (userInput2="cSharp") {
-//     cSch += 1;
-//   } else if (userInput2="java") {
-//     jav = +=1;
-//   } else if (userInput2="php") {
-//     php = +=1;
-//   } else {
-//     rub = +1;
-//   }
-//
-//   if (userInput3="cSharp") {
-//     cSch += 1;
-//   } else if (userInput3="java") {
-//     jav = +=1;
-//   } else if (userInput3="php") {
-//     php = +=1;
-//   } else {
-//     rub = +1;
-//   }
-//
-//   if (cSch >= 2) {
-//     return "cSharp";
-//   } else if (jav >= 2) {
-//     return "java";
-//   } else if (php >= 2) {
-//     return "php";
-//   } else if (rub >= 2) {
-//     return "ruby"
-//   } else {
-//     return "NONE"
-//   }
-// }
+var whichLanguage = function(userInput1, userInput2, userInput3) {
+  var cSh = 0;
+  var jav = 0;
+  var php = 0;
+  var rub = 0;
+
+  if (userInput1="cSharp") {
+    cSch += 1;
+  } else if (userInput1="java") {
+    jav += 1;
+  } else if (userInput1="php") {
+    php += 1;
+  } else {
+    rub += 1;
+  }
+
+  if (userInput2="cSharp") {
+    cSch += 1;
+  } else if (userInput2="java") {
+    jav += 1;
+  } else if (userInput2="php") {
+    php += 1;
+  } else {
+    rub += 1;
+  }
+
+  if (userInput3="cSharp") {
+    cSch += 1;
+  } else if (userInput3="java") {
+    jav += 1;
+  } else if (userInput3="php") {
+    php += 1;
+  } else {
+    rub += 1;
+  }
+
+  if (cSch >= 2) {
+    return "";
+  } else if (jav >= 2) {
+    return "java";
+  } else if (php >= 2) {
+    return "php";
+  } else if (rub >= 2) {
+    return "ruby"
+  } else {
+    return "NONE"
+  }
+
+  return "#decision"
+}
 
 
 // front end logic
@@ -66,7 +68,9 @@ $(document).ready(function() {
   $("#devOption").submit(function() {
     event.preventDefault();
     var devOptionSelection = $("#whichOption").val();
+    debugger;
     var result = whichDev(devOptionSelection);
+    debugger;
     $("#frontEnd").hide();
     $("#backEnd").hide();
     $("#both").hide();
@@ -74,14 +78,19 @@ $(document).ready(function() {
     $(result).show();
   });
 
-  // $("#backEnd").submit(function() {
-  //   event.preventDefault();
-  //   var userInput1 = $("#question2").val();
-  //   var userInput1 = $("#question3").val();
-  //   var userInput1 = $("#question4").val();
-  //
-  //   var result = whichLanguage(userInput1, userInput2, userInput3);
-  //
-  //   $(".language").text(result);
-  // });
+  $("#backEnd").submit(function() {
+    event.preventDefault();
+    var userInput1 = $("#question2").val();
+    var userInput2 = $("#question3").val();
+    var userInput3 = $("#question4").val();
+
+    var result = whichLanguage(userInput1, userInput2, userInput3);
+    debugger
+    $("#decision").hide();
+
+    $(".question2").text(userInput1);
+    $(".question3").text(userInput2);
+    $(".question4").text(userInput3);
+    $(".language").text(result);
+  });
 });
