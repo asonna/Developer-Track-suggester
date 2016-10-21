@@ -7,7 +7,7 @@ var whichDev = function(whichOption) {
     return "#backEnd";
 
   } else {
-    return "#frontEnd", "#backEnd";
+    return "#frontEnd, #backEnd";
   }
 }
 
@@ -18,7 +18,7 @@ var whichLanguage = function(userInput1, userInput2, userInput3) {
   var rub = 0;
 
   if (userInput1="cSharp") {
-    cSch += 1;
+    cSh += 1;
   } else if (userInput1="java") {
     jav += 1;
   } else if (userInput1="php") {
@@ -28,7 +28,7 @@ var whichLanguage = function(userInput1, userInput2, userInput3) {
   }
 
   if (userInput2="cSharp") {
-    cSch += 1;
+    cSh += 1;
   } else if (userInput2="java") {
     jav += 1;
   } else if (userInput2="php") {
@@ -38,7 +38,7 @@ var whichLanguage = function(userInput1, userInput2, userInput3) {
   }
 
   if (userInput3="cSharp") {
-    cSch += 1;
+    cSh += 1;
   } else if (userInput3="java") {
     jav += 1;
   } else if (userInput3="php") {
@@ -47,7 +47,7 @@ var whichLanguage = function(userInput1, userInput2, userInput3) {
     rub += 1;
   }
 
-  if (cSch >= 2) {
+  if (cSh >= 2) {
     return "";
   } else if (jav >= 2) {
     return "java";
@@ -68,12 +68,12 @@ $(document).ready(function() {
   $("#devOption").submit(function() {
     event.preventDefault();
     var devOptionSelection = $("#whichOption").val();
-    debugger;
     var result = whichDev(devOptionSelection);
-    debugger;
+
+    // if (de)
     $("#frontEnd").hide();
     $("#backEnd").hide();
-    $("#both").hide();
+    $("#decision").hide();
     $("#devOption").hide();
     $(result).show();
   });
@@ -84,13 +84,12 @@ $(document).ready(function() {
     var userInput2 = $("#question3").val();
     var userInput3 = $("#question4").val();
 
-    var result = whichLanguage(userInput1, userInput2, userInput3);
+    var results = whichLanguage(userInput1, userInput2, userInput3);
     debugger
-    $("#decision").hide();
 
     $(".question2").text(userInput1);
     $(".question3").text(userInput2);
     $(".question4").text(userInput3);
-    $(".language").text(result);
+    $(".language").text(results);
   });
 });
