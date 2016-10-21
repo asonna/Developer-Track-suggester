@@ -7,11 +7,13 @@
 
 body {
   background-color: lightblue;
+  font-size: 18px;
+  font-family: monospace;
 }
 
 h3 {
-  font-family: ;
-
+  color: maroon;
+  font-weight: bold;
 }
 
 img {
@@ -24,5 +26,9 @@ img {
 }
 
 #frontEnd {
+  display: none;
+}
+
+#languageSuggested {
   display: none;
 }
