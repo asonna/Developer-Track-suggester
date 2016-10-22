@@ -17,50 +17,49 @@ var whichLanguage = function(userInput1, userInput2, userInput3) {
   var php = 0;
   var rub = 0;
 
-  if (userInput1="cSharp") {
-    cSh += 1;
-  } else if (userInput1="java") {
-    jav += 1;
-  } else if (userInput1="php") {
-    php += 1;
+  if (userInput1 === "cSharp") {
+    cSh+=1;
+  } else if (userInput1 ===  "java") {
+    jav+=1;
+  } else if (userInput1 ===  "php") {
+    php+=1;
   } else {
-    rub += 1;
+    rub+=1;
   }
 
-  if (userInput2="cSharp") {
-    cSh += 1;
-  } else if (userInput2="java") {
-    jav += 1;
-  } else if (userInput2="php") {
-    php += 1;
+  if (userInput2 === "cSharp") {
+    cSh +=1;
+  } else if (userInput2 ===  "java") {
+    jav +=1;
+  } else if (userInput2 ===  "php") {
+    php +=1;
   } else {
-    rub += 1;
+    rub +=1;
   }
 
-  if (userInput3="cSharp") {
-    cSh += 1;
-  } else if (userInput3="java") {
-    jav += 1;
-  } else if (userInput3="php") {
-    php += 1;
+  if (userInput3 ===  "cSharp") {
+    cSh +=1;
+  } else if (userInput3 ===  "java") {
+    jav +=1;
+  } else if (userInput3 ===  "php") {
+    php +=1;
   } else {
-    rub += 1;
+    rub +=1;
   }
 
   if (cSh >= 2) {
-    return "";
+    return "the C#/.NET track";
   } else if (jav >= 2) {
-    return "java";
+    return  "the Java/ Android track";
   } else if (php >= 2) {
-    return "php";
+    return  "the Php/ Drupal track";
   } else if (rub >= 2) {
-    return "ruby"
+    return "the Ruby/ Rail track";
   } else {
-    return "NONE"
+    return "Any track; with Java and C# been more complex than Php and Ruby.";
   }
-
-  return "#decision"
 }
+
 
 
 // front end logic
@@ -85,11 +84,11 @@ $(document).ready(function() {
     var userInput3 = $("#question4").val();
 
     var results = whichLanguage(userInput1, userInput2, userInput3);
-    debugger
 
-    $(".question2").text(userInput1);
-    $(".question3").text(userInput2);
-    $(".question4").text(userInput3);
     $(".language").text(results);
+    debugger
+    $("#backEnd").hide();
+    $("#decision").show();
+    debugger
   });
 });
