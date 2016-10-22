@@ -29,9 +29,10 @@ img {
   display: none;
 }
 
+#decision {
+  display: none;
+}
+
 footer {
   padding-left: 70px;
 }
-/*#decision {
-
-}*/

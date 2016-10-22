@@ -58,6 +58,8 @@ var whichLanguage = function(userInput1, userInput2, userInput3) {
   } else {
     return "Any track; with Java and C# been more complex than Php and Ruby.";
   }
+
+
 }
 
 
@@ -78,6 +80,7 @@ $(document).ready(function() {
   });
 
   $("#backEnd").submit(function() {
+    debugger;
     event.preventDefault();
     var userInput1 = $("#question2").val();
     var userInput2 = $("#question3").val();
@@ -85,10 +88,12 @@ $(document).ready(function() {
 
     var results = whichLanguage(userInput1, userInput2, userInput3);
 
-    $(".language").text(results);
-    debugger
     $("#backEnd").hide();
     $("#decision").show();
-    debugger
+    $(".language").text(results);
+
+
+
+
   });
 });
