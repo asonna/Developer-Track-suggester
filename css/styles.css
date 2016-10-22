@@ -36,3 +36,8 @@ img {
 footer {
   padding-left: 70px;
 }
+
+span {
+  text-align: center;
+  color: maroon;
+}
