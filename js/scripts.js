@@ -56,7 +56,7 @@ var whichLanguage = function(userInput1, userInput2, userInput3) {
   } else if (rub >= 2) {
     return "the Ruby/ Rail track";
   } else {
-    return "Any track; with Java and C# been more complex than Php and Ruby.";
+    return "Any track; with Java and C# been more complex than Php and Ruby";
   }
 
 
