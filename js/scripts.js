@@ -76,7 +76,7 @@ $(document).ready(function() {
     $("#backEnd").hide();
     $("#decision").hide();
     $("#devOption").hide();
-    $(result).show();
+    $(result).show().fadein();
   });
 
   $("#backEnd").submit(function() {
@@ -88,12 +88,10 @@ $(document).ready(function() {
 
     var results = whichLanguage(userInput1, userInput2, userInput3);
 
+    $("#frontEnd").hide();
     $("#backEnd").hide();
     $("#decision").show();
     $(".language").text(results);
-
-
-
 
   });
 });
