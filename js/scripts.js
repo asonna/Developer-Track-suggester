@@ -71,7 +71,6 @@ $(document).ready(function() {
     var devOptionSelection = $("#whichOption").val();
     var result = whichDev(devOptionSelection);
 
-    // if (de)
     $("#frontEnd").hide();
     $("#backEnd").hide();
     $("#decision").hide();
